@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import Typewriter from "typewriter-effect";
+
+import { NavBar } from "./components/NavBar";
+import { MouseGlow } from "./components/MouseGlow";
+import { TechCarousel } from "./components/TechCarousel/TechCarousel";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      {/* <MouseGlow /> */}
+      <NavBar />
+
+      {/* Main content centered below */}
+      <div className="font-robotoMono flex flex-col ms-[50rem] mt-52">
+        <div className="text-left">
+          <p className="text-lg md:text-xl text-gray-200 mb-5">
+            Hi, my name is
+          </p>
+          <h1
+            className="text-4xl md:text-6xl font-bold mb-7 text-rose-500
+          "
+          >
+            <Typewriter
+              options={{
+                strings: ["Tazim Khan."],
+                autoStart: true,
+                cursor: "_",
+                deleteSpeed: Infinity,
+                loop: false,
+                delay: 100,
+              }}
+            />
+          </h1>
+          <p className="text-gray-300">
+            I'm a 3rd-year Software Engineering student at the{" "}
+            <span className="text-rose-500">University of Ottawa</span>. <br />
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-4 mt-10">
+          <button className="px-4 py-4 w-44 bg-rose-600 text-gray-200 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
+            Resume
+          </button>
+          <button className="px-4 w-44 border-2 border-blue-500 text-blue-300 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
+            Projects
+          </button>
+          <button className="px-2 w-fit border-2 border-gray-400 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
+            <img src="/icons/github.png" alt="GitHub" className="w-11 invert" />
+          </button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <TechCarousel />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
