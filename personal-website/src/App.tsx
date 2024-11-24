@@ -8,7 +8,7 @@ import { TechCarousel } from "./components/TechCarousel/TechCarousel";
 function App() {
   return (
     <>
-      {/* <MouseGlow /> */}
+      <MouseGlow />
       <NavBar />
 
       {/* Main content centered below */}
@@ -27,7 +27,7 @@ function App() {
                 autoStart: true,
                 cursor: "_",
                 deleteSpeed: Infinity,
-                loop: false,
+                loop: true,
                 delay: 100,
               }}
             />
@@ -38,13 +38,13 @@ function App() {
           </p>
         </div>
         <div className="flex flex-wrap gap-4 mt-10">
-          <button className="px-4 py-4 w-44 bg-rose-600 text-gray-200 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
+          <button className="resume px-4 py-4 w-44 bg-rose-600 text-gray-200 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
             Resume
           </button>
-          <button className="px-4 w-44 border-2 border-blue-500 text-blue-300 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
+          <button className="projects px-4 w-44 border-2 border-blue-500 text-blue-300 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
             Projects
           </button>
-          <button className="px-2 w-fit border-2 border-gray-400 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
+          <button className="github px-2 w-fit border-2 border-gray-400 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
             <img src="/icons/github.png" alt="GitHub" className="w-11 invert" />
           </button>
         </div>
