@@ -1,4 +1,0 @@
-/* Pause the animation while keeping its position */
-.hover\:animation-paused:hover {
-  animation-play-state: paused;
-}
