@@ -12,13 +12,13 @@ function App() {
       <NavBar />
 
       {/* Main content centered below */}
-      <div className="font-robotoMono flex flex-col ms-[50rem] mt-52">
+      <div className="font-robotoMono flex flex-col ms-[50rem] mt-64">
         <div className="text-left">
           <p className="text-lg md:text-xl text-gray-200 mb-5">
             Hi, my name is
           </p>
           <h1
-            className="text-4xl md:text-6xl font-bold mb-7 text-rose-500
+            className="text-4xl md:text-7xl font-bold mb-7 text-rose-500
           "
           >
             <Typewriter
