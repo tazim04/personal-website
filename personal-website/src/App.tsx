@@ -1,9 +1,10 @@
 import "./App.css";
 import Typewriter from "typewriter-effect";
 
-import { NavBar } from "./components/NavBar";
+import { NavBar } from "./components/NavBar/NavBar";
 import { MouseGlow } from "./components/MouseGlow";
 import { TechCarousel } from "./components/TechCarousel/TechCarousel";
+import { Button } from "@headlessui/react";
 
 function App() {
   return (
@@ -38,19 +39,21 @@ function App() {
           </p>
         </div>
         <div className="flex flex-wrap gap-4 mt-10">
-          <button className="resume px-4 py-4 w-44 bg-rose-600 text-gray-200 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
+          <Button className="resume px-4 py-4 w-44 bg-rose-600 text-gray-200 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
             Resume
-          </button>
-          <button className="projects px-4 w-44 border-2 border-blue-500 text-blue-300 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
+          </Button>
+          <Button className="projects px-4 w-44 border-2 border-blue-500 text-blue-300 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
             Projects
-          </button>
-          <button className="github px-2 w-fit border-2 border-gray-400 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
-            <img
-              src="./icons/github.png"
-              alt="GitHub"
-              className="w-11 invert"
-            />
-          </button>
+          </Button>
+          <Button
+            as="a"
+            href="https://github.com/tazim04"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github px-2 w-fit border-2 border-gray-400 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1"
+          >
+            <img src="./icons/github.png" alt="GitHub" className="w-11" />
+          </Button>
         </div>
       </div>
       <TechCarousel />
