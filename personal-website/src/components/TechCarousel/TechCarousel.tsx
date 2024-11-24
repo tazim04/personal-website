@@ -3,17 +3,17 @@ import Marquee from "react-fast-marquee";
 import "./TechCarousel.css";
 
 const icons = [
-  "/icons/carousel/javascript.png",
-  "/icons/carousel/typescript.png",
-  "/icons/carousel/python.png",
-  "/icons/carousel/java.png",
-  "/icons/carousel/kotlin.png",
-  "/icons/carousel/spring.png",
-  "/icons/carousel/nextjs.png",
-  "/icons/carousel/react.png",
-  "/icons/carousel/angular.png",
-  "/icons/carousel/node.png",
-  "/icons/github.png",
+  "./icons/carousel/javascript.png",
+  "./icons/carousel/typescript.png",
+  "./icons/carousel/python.png",
+  "./icons/carousel/java.png",
+  "./icons/carousel/kotlin.png",
+  "./icons/carousel/spring.png",
+  "./icons/carousel/nextjs.png",
+  "./icons/carousel/react.png",
+  "./icons/carousel/angular.png",
+  "./icons/carousel/node.png",
+  "./icons/github.png",
 ];
 
 export const TechCarousel = () => {

@@ -45,7 +45,11 @@ function App() {
             Projects
           </button>
           <button className="github px-2 w-fit border-2 border-gray-400 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
-            <img src="/icons/github.png" alt="GitHub" className="w-11 invert" />
+            <img
+              src="./icons/github.png"
+              alt="GitHub"
+              className="w-11 invert"
+            />
           </button>
         </div>
       </div>
