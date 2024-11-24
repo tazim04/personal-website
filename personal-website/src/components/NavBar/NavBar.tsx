@@ -8,7 +8,7 @@ export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="text-white w-full md:px-16 md:py-5 font-robotoMono">
+    <nav className="text-white w-full px-8 py-2 md:px-16 md:py-5 font-robotoMono">
       <div className="">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -58,8 +58,8 @@ export const NavBar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <Menu as="div" className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-700">
+        <Menu as="div" className="md:hidden fixed right-0 text-right">
+          <div className="px-2 pt-2 pb-3 w-72 space-y-1 sm:px-3 bg-gray-700">
             <a
               href="#"
               className="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-600"

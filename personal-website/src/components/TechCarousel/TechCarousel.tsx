@@ -20,7 +20,7 @@ export const TechCarousel = () => {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
 
   return (
-    <div className="w-[90%] mx-auto my-20 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+    <div className="md:w-[90%] w-full md:mx-auto my-20 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
       <Marquee
         gradient={false}
         speed={50} // Adjust the speed as needed
@@ -36,7 +36,7 @@ export const TechCarousel = () => {
             <img
               src={icon}
               alt={`Icon ${index}`}
-              className={`h-32 transition-all ease-in-out hover:-translate-y-1 ${
+              className={`md:h-32 h-20 transition-all ease-in-out hover:-translate-y-1 ${
                 icon === "/icons/github.png" ? "invert" : ""
               } ${
                 hoveredIcon && hoveredIcon !== icon
