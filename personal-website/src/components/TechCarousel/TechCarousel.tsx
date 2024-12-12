@@ -20,7 +20,7 @@ export const TechCarousel = () => {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
 
   return (
-    <div className="md:w-[90%] w-full md:mx-auto my-20 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+    <div className="md:w-[90%] w-full md:mx-auto mt-36 overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
       <Marquee
         gradient={false}
         speed={50} // Adjust the speed as needed
