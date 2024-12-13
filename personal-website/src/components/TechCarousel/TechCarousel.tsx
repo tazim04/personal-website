@@ -16,7 +16,7 @@ const icons = [
   "./icons/github.png",
 ];
 
-export const TechCarousel = () => {
+const TechCarousel = () => {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
 
   return (
@@ -50,3 +50,5 @@ export const TechCarousel = () => {
     </div>
   );
 };
+
+export default TechCarousel;

@@ -4,7 +4,7 @@ import "./NavBar.css";
 import { Menu } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
-export const NavBar = () => {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -12,7 +12,7 @@ export const NavBar = () => {
       <div className="">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 text-rose-600 transition-all ease-in-out hover:scale-110 bg-gradient-to-r from-pink-500 via-red-500 to-rose-500 bg-clip-text text-transparent glow-text">
+          <div className="flex-shrink-0 text-rose-600 transition-all ease-in-out hover:text-pink-500 bg-gradient-to-r from-pink-500 via-red-500 to-rose-500 bg-clip-text text-transparent glow-text">
             <a className="text-xl font-bold" href="#">
               Tazim Khan
             </a>
@@ -22,19 +22,19 @@ export const NavBar = () => {
           <div className="hidden md:flex space-x-4">
             <a
               href="#"
-              className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
+              className="px-3 py-2 rounded-md text-sm font-medium transition-all ease-in-out hover:bg-gray-700"
             >
               <span className="text-rose-600 glow-text">00. </span>About
             </a>
             <a
               href="#"
-              className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
+              className="px-3 py-2 rounded-md text-sm font-medium transition-all ease-in-out hover:bg-gray-700"
             >
               <span className="text-rose-600 glow-text">01. </span>Experience
             </a>
             <a
               href="#"
-              className="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
+              className="px-3 py-2 rounded-md text-sm font-medium transition-all ease-in-out hover:bg-gray-700"
             >
               <span className="text-rose-600 glow-text">02. </span>Projects
             </a>
@@ -84,3 +84,5 @@ export const NavBar = () => {
     </nav>
   );
 };
+
+export default NavBar;

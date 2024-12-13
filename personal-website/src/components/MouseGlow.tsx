@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const MouseGlow = () => {
+const MouseGlow = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   // track mouse movement
@@ -22,3 +22,5 @@ export const MouseGlow = () => {
     />
   );
 };
+
+export default MouseGlow;

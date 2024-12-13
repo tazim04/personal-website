@@ -2,16 +2,26 @@ import "./App.css";
 import Typewriter from "typewriter-effect";
 import { useInView } from "react-intersection-observer";
 
-import { NavBar } from "./components/NavBar/NavBar";
-import { MouseGlow } from "./components/MouseGlow";
-import { TechCarousel } from "./components/TechCarousel/TechCarousel";
+import NavBar from "./components/NavBar/NavBar";
+import MouseGlow from "./components/MouseGlow";
+import TechCarousel from "./components/TechCarousel/TechCarousel";
 import { Button } from "@headlessui/react";
 import About from "./sections/About/About";
+import Experience from "./sections/Experience/Experience";
+import Projects from "./sections/Projects/Projects";
 
 function App() {
   const { ref: aboutRef, inView: isAboutInView } = useInView({
-    triggerOnce: true, // Only animate the section the first time it comes into view
-    threshold: 0.5, // Trigger when 10% of the section is visible
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const { ref: expRef, inView: isExpInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const { ref: projRef, inView: isProjInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
   });
   return (
     <div className="text-gray-200 font-robotoMono">
@@ -20,7 +30,7 @@ function App() {
 
       {/* Main content centered below */}
       <section className="h-screen">
-        <div className="flex flex-col md:ms-[50rem] ms-20 md:mt-72 mt-20">
+        <div className="flex flex-col md:ms-[50rem] ms-20 absolute md:top-[30vh] top-[20vh]">
           <div className="text-left md:pe-0 pe-5">
             <p className="text-sm md:text-lg mb-2 md:mb-5">Hi, my name is</p>
             <h1 className="text-5xl md:text-7xl font-bold mb-5 md:mb-7 text-rose-500">
@@ -62,19 +72,44 @@ function App() {
             </Button>
           </div>
         </div>
-        <TechCarousel />
+        <div className="absolute md:top-[50vh] top-[56vh]">
+          <TechCarousel />
+        </div>
       </section>
 
-      <section
-        ref={aboutRef}
-        className={`flex justify-center transition-all ease-in-out duration-500 ${
-          isAboutInView
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-x-10"
-        }`}
-      >
-        <About />
-      </section>
+      <div className="overflow-x-hidden">
+        <section
+          ref={aboutRef}
+          className={`flex justify-center transition-all ease-in-out duration-500 ${
+            isAboutInView
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 md:-translate-x-10"
+          }`}
+        >
+          <About />
+        </section>
+        <section
+          ref={expRef}
+          className={`flex justify-center transition-all ease-in-out duration-500 ${
+            isExpInView
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-x-10"
+          }`}
+        >
+          <Experience />
+        </section>
+
+        <section
+          ref={projRef}
+          className={`flex justify-center transition-all ease-in-out duration-500 ${
+            isProjInView
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-x-10"
+          }`}
+        >
+          <Projects />
+        </section>
+      </div>
     </div>
   );
 }
