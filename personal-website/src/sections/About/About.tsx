@@ -36,7 +36,7 @@ const About = () => {
             <br />
             <br />
             <div className="mb-3">My technical experties:</div>
-            <ul className="list-disc list-inside grid grid-cols-1 gap-y-1 marker:text-rose-500">
+            <ul className="list-disc list-inside grid grid-cols-1 gap-y-1 marker:text-rose-500 text-indent">
               <li>
                 <span className="font-bold">Frontend:</span> React, Angular,
                 Next.js

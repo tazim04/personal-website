@@ -15,7 +15,7 @@ const NavBar: React.FC<NavBarProps> = ({ handleNavClick }) => {
 
   return (
     <>
-      <nav className="text-white w-full px-8 py-2 md:px-16 md:py-5 font-robotoMono">
+      <nav className="text-white bg-[#0f172a] z-10 sticky top-0 w-full px-8 py-2 md:px-16 md:py-5 font-robotoMono">
         <div className="">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -46,14 +46,14 @@ const NavBar: React.FC<NavBarProps> = ({ handleNavClick }) => {
                 <span className="text-rose-600 glow-text">02. </span>Projects
               </button>
             </div>
-
-            {/* Mobile Menu Button */}
-            <div className="flex md:hidden z-50">
-              <Hamburger toggled={isOpen} toggle={setIsOpen} size={25} />
-            </div>
           </div>
         </div>
       </nav>
+
+      {/* Mobile Menu Button */}
+      <div className="flex md:hidden fixed right-2 top-4 z-50">
+        <Hamburger toggled={isOpen} toggle={setIsOpen} size={25} />
+      </div>
 
       <AnimatePresence>
         {isOpen && (
@@ -63,7 +63,7 @@ const NavBar: React.FC<NavBarProps> = ({ handleNavClick }) => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed top-0 right-0 h-screen bg-[#182442] z-30 flex flex-col items-end"
+            className="fixed top-0 right-0 h-screen bg-[#182442] flex flex-col items-end z-40"
           >
             <div className="px-4 pt-20 pb-3 space-y-4 flex flex-col items-end text-base font-medium text-gray-300">
               <button

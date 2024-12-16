@@ -66,7 +66,8 @@ function App() {
   };
 
   return (
-    <div className="text-gray-200 font-robotoMono debug-screens">
+    // debug-screens -> use this class to check tailwind screen size
+    <div className="text-gray-200 font-robotoMono">
       <MouseGlow />
       <NavBar handleNavClick={handleNavClick} />
 
