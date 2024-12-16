@@ -15,7 +15,7 @@ const MouseGlow = () => {
 
   return (
     <div
-      className="pointer-events-none fixed top-0 left-0 w-[1000px] h-[1000px] bg-blue-900 opacity-[0.03] rounded-full blur-[100px]"
+      className="pointer-events-none fixed top-0 left-0 w-[1000px] h-[1000px] bg-blue-900 opacity-[0.03] rounded-full blur-[100px] hidden md:block"
       style={{
         transform: `translate(${position.x - 500}px, ${position.y - 500}px)`,
       }}
