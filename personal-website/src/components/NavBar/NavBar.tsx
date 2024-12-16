@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./NavBar.css";
 
-import { Menu } from "@headlessui/react";
 import { motion, AnimatePresence } from "framer-motion";
 import Hamburger from "hamburger-react";
 

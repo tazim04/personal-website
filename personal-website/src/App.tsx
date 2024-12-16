@@ -14,7 +14,7 @@ import { useRef, useState } from "react";
 type Section = "home" | "about" | "experience" | "projects"; // Section union
 
 function App() {
-  const [navFocus, setNavFocus] = useState<Section>("home");
+  const setNavFocus = useState<Section>("home")[1];
 
   const { ref: aboutRef, inView: isAboutInView } = useInView({
     triggerOnce: true,
