@@ -26,14 +26,14 @@ const Experience = () => {
   ];
 
   return (
-    <div className="2xl:w-1/2 md:w-5/6 relative 2xl:left-80 md:left-20">
+    <div className="2xl:w-1/2 md:w-5/6 relative w-11/12 2xl:left-80 md:left-20">
       <h1 className="text-right text-2xl">
         <span className="text-rose-500 glow-text">01.</span> Experience
       </h1>
 
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
 
-      <div className="bg-gray-300 bg-opacity-5 rounded-lg p-7">
+      <div className="bg-gray-300 bg-opacity-5 rounded-lg md:p-7 p-3">
         {exps.map((job, index) => (
           <div key={index} className="mb-6">
             <ExpDetails job={job} />

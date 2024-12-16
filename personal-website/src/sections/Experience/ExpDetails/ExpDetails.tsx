@@ -26,7 +26,7 @@ const ExpDetails: React.FC<ExpDetailsProps> = ({ job }) => {
       <div className="text-sm text-gray-300 leading-relaxed">
         {job.details.map((point, index) => (
           <div key={index}>
-            <ul className="list-disc list-inside grid grid-cols-1 gap-y-1 marker:text-rose-500">
+            <ul className="list-disc list-inside marker:text-rose-500">
               <li className="text-indent">{point}</li>
             </ul>
           </div>

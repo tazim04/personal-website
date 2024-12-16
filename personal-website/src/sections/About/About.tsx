@@ -2,7 +2,7 @@ import "./About.css";
 
 const About = () => {
   return (
-    <div className="2xl:w-1/2 md:w-5/6 relative 2xl:right-80 md:right-20">
+    <div className="2xl:w-1/2 md:w-5/6 w-11/12 relative 2xl:right-80 md:right-20">
       <h1 className="text-left text-2xl">
         <span className="text-rose-500 glow-text">00.</span> About Me
       </h1>
