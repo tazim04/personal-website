@@ -53,13 +53,13 @@ function App() {
 
     switch (section) {
       case "about":
-        scrollWithOffset(aboutScrollRef, 20);
+        scrollWithOffset(aboutScrollRef, 110);
         break;
       case "experience":
-        scrollWithOffset(expScrollRef, 80);
+        scrollWithOffset(expScrollRef, 110);
         break;
       case "projects":
-        scrollWithOffset(projScrollRef, 80);
+        scrollWithOffset(projScrollRef, 110);
         break;
       default:
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -99,7 +99,7 @@ function App() {
             <Button
               className="resume text-center px-4 py-2 md:py-4 w-36 md:w-44 bg-rose-600 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1"
               as="a"
-              href="src\assets\Resume - Tazim Khan.pdf"
+              href=" /personal-website/Resume - Tazim Khan.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
