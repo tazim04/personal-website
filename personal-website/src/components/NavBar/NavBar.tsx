@@ -20,7 +20,7 @@ const NavBar: React.FC<NavBarProps> = ({ handleNavClick }) => {
         <div className="">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <div className="flex-shrink-0 text-rose-600 transition-all ease-in-out hover:text-pink-500 bg-gradient-to-r from-pink-500 via-red-500 to-rose-500 bg-clip-text text-transparent glow-text">
+            <div className="flex-shrink-0 cursor-pointer text-rose-600 transition-all ease-in-out hover:text-pink-500 bg-gradient-to-r from-pink-500 via-red-500 to-rose-500 bg-clip-text text-transparent glow-text">
               <div
                 className="text-xl font-bold"
                 onClick={() => handleNavClick("home")}
