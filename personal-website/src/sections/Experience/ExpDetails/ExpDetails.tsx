@@ -13,8 +13,10 @@ const ExpDetails: React.FC<ExpDetailsProps> = ({ job }) => {
     <div className="bg-gray-800 rounded-lg shadow-md p-6 text-gray-200 font-robotoMono">
       {/* Job Title and Company */}
       <div className="mb-4">
-        <h2 className="text-2xl font-bold text-rose-500">{job.title}</h2>
-        <p className="text-lg text-gray-400">{job.company}</p>
+        <h2 className="md:text-2xl text-lg font-bold text-rose-500">
+          {job.title}
+        </h2>
+        <p className="md:text-lg text-gray-400">{job.company}</p>
       </div>
 
       {/* Duration */}
@@ -27,7 +29,7 @@ const ExpDetails: React.FC<ExpDetailsProps> = ({ job }) => {
         {job.details.map((point, index) => (
           <div key={index}>
             <ul className="list-disc list-inside marker:text-rose-500">
-              <li className="text-indent">{point}</li>
+              <li className="text-indent py-1">{point}</li>
             </ul>
           </div>
         ))}

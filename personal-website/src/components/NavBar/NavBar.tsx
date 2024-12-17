@@ -3,6 +3,7 @@ import "./NavBar.css";
 
 import { motion, AnimatePresence } from "framer-motion";
 import Hamburger from "hamburger-react";
+import Socials from "../Socials/Socials";
 
 type NavBarProps = {
   handleNavClick: (
@@ -20,9 +21,12 @@ const NavBar: React.FC<NavBarProps> = ({ handleNavClick }) => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex-shrink-0 text-rose-600 transition-all ease-in-out hover:text-pink-500 bg-gradient-to-r from-pink-500 via-red-500 to-rose-500 bg-clip-text text-transparent glow-text">
-              <a className="text-xl font-bold" href="#">
+              <div
+                className="text-xl font-bold"
+                onClick={() => handleNavClick("home")}
+              >
                 Tazim Khan
-              </a>
+              </div>
             </div>
 
             {/* Desktop Menu */}
@@ -51,7 +55,7 @@ const NavBar: React.FC<NavBarProps> = ({ handleNavClick }) => {
       </nav>
 
       {/* Mobile Menu Button */}
-      <div className="flex md:hidden fixed right-2 top-4 z-50">
+      <div className="flex md:hidden fixed right-4 top-4 z-50">
         <Hamburger toggled={isOpen} toggle={setIsOpen} size={25} />
       </div>
 
@@ -93,6 +97,7 @@ const NavBar: React.FC<NavBarProps> = ({ handleNavClick }) => {
               >
                 <span className="text-rose-600 glow-text">02. </span>Projects
               </button>
+              <Socials />
             </div>
           </motion.div>
         )}

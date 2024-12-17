@@ -3,6 +3,7 @@ import Typewriter from "typewriter-effect";
 import { useInView } from "react-intersection-observer";
 
 import NavBar from "./components/NavBar/NavBar";
+import Socials from "./components/Socials/Socials";
 import MouseGlow from "./components/MouseGlow";
 import TechCarousel from "./components/TechCarousel/TechCarousel";
 import { Button } from "@headlessui/react";
@@ -68,6 +69,9 @@ function App() {
   return (
     // debug-screens -> use this class to check tailwind screen size
     <div className="text-gray-200 font-robotoMono">
+      <div className="hidden md:block">
+        <Socials />
+      </div>
       <MouseGlow />
       <NavBar handleNavClick={handleNavClick} />
 
@@ -92,10 +96,19 @@ function App() {
             <span className="text-rose-500">University of Ottawa</span>.
           </p>
           <div className="flex flex-row flex-wrap gap-4 mt-10">
-            <Button className="resume px-4 py-2 md:py-4 w-36 md:w-44 bg-rose-600 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
+            <Button
+              className="resume text-center px-4 py-2 md:py-4 w-36 md:w-44 bg-rose-600 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1"
+              as="a"
+              href="src\assets\Resume - Tazim Khan.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Resume
             </Button>
-            <Button className="projects px-4 py-2 md:py-4 w-36 md:w-44 border-2 border-blue-500 text-blue-300 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1">
+            <Button
+              className="projects px-4 py-2 md:py-4 w-36 md:w-44 border-2 border-blue-500 text-blue-300 rounded-sm transition-all ease-in-out hover:rounded-[1.5rem] active:translate-y-1"
+              onClick={() => handleNavClick("projects")}
+            >
               Projects
             </Button>
             <Button

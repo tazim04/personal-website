@@ -3,7 +3,7 @@ import ExpDetails from "./ExpDetails/ExpDetails";
 const Experience = () => {
   const exps = [
     {
-      title: "Full-Stack Developer (CO-OP)",
+      title: "Full-Stack Developer",
       company: "Canada Revenue Agency",
       duration: "May 2023 - Sept. 2023, Jan 2024 - Apr. 2024",
       details: [
