@@ -1,11 +1,8 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import { Tooltip, useMediaQuery } from "@mui/material";
 
 const Socials = () => {
-  const isMobile = useMediaQuery("(max-width: 768px)");
-
   return (
     <div className="fixed bottom-10 md:right-5 right-1">
       <div className="flex flex-col items-end">
