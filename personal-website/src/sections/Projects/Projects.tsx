@@ -15,7 +15,7 @@ const Projects = () => {
       description:
         "Developed and maintained the University of Ottawa Health and Fitness Society website using Next.js and Tailwind CSS. Automated real-time updates for the 'Events' page using Google Calendar API.",
       technologies: ["Next.js", "Tailwind CSS", "Google Calendar API"],
-      thumbnail: "./thumbnails/uohfs.jpg",
+      thumbnail: "./projects/uohfs.png",
       link: "https://uohfs-website.vercel.app/",
     },
     {
@@ -23,21 +23,21 @@ const Projects = () => {
       description:
         "Collaborated in a team of 5 to develop a Team Management System's Team Creation Sub-System. Built secure backend infrastructure with Spring Boot and connected responsive Angular UI with robust APIs.",
       technologies: ["Angular", "Spring Boot (Kotlin)", "PostgreSQL", "Docker"],
-      thumbnail: "./thumbnails/studysync.jpg",
+      thumbnail: "./projects/studySync.png",
       link: "https://github.com/tazim04/studysync",
     },
     {
       title: "Talk Box",
       description:
         "Collaborated to develop a Talk Box device using a Raspberry Pi and C# (.NET) to enable nonverbal users with limited motor control to communicate effectively.",
-      technologies: ["C#", ".NET", "Raspberry Pi (Linux)"],
-      thumbnail: "./thumbnails/talkbox.jpg",
-      link: "https://github.com/tazim04/talkbox",
+      technologies: ["C# (.NET)", "Raspberry Pi (Linux)"],
+      thumbnail: "./projects/talkBox.jpeg",
+      link: "https://www.linkedin.com/posts/tazim-khan_im-happy-to-share-this-talk-and-music-box-activity-7136521162288689152-5lyW?utm_source=share&utm_medium=member_desktop",
     },
   ];
 
   return (
-    <div className="w-6/12 relative right-80">
+    <div className="2xl:w-1/2 md:w-5/6 w-11/12 relative 2xl:right-80 md:right-20">
       <h1 className="text-left text-2xl">
         <span className="text-rose-500 glow-text">02.</span> Projects
       </h1>

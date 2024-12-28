@@ -36,7 +36,7 @@ const TechCarousel = () => {
             <img
               src={icon}
               alt={`Icon ${index}`}
-              className={`md:h-32 h-20 transition-all ease-in-out hover:-translate-y-1 ${
+              className={`md:h-24 h-20 transition-all ease-in-out hover:-translate-y-1 ${
                 icon === "/icons/github.png" ? "invert" : ""
               } ${
                 hoveredIcon && hoveredIcon !== icon

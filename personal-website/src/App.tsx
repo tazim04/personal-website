@@ -30,7 +30,7 @@ function App() {
 
   const { ref: projRef, inView: isProjInView } = useInView({
     triggerOnce: true,
-    threshold: window.innerWidth < 768 ? 0.2 : 0.5,
+    threshold: 0.2,
   });
 
   // Separate refs for scrolling
@@ -77,7 +77,7 @@ function App() {
       <NavBar handleNavClick={handleNavClick} />
 
       {/* Main content centered below */}
-      <section className="h-screen flex flex-col md:justify-center justify-start items-center mt-14 md:mt-0">
+      <section className="h-screen flex flex-col md:justify-center justify-start items-center mt-14 md:-mt-10">
         <div className="text-left px-9 md:px-0">
           <p className="text-sm md:text-lg mb-2 md:mb-5">Hi, my name is</p>
           <h1 className="text-5xl md:text-7xl font-bold mb-5 md:mb-7 text-rose-500">
@@ -127,7 +127,7 @@ function App() {
             </Button>
           </div>
         </div>
-        <div className="w-full md:mt-36 mt-14">
+        <div className="w-full md:mt-16 mt-14">
           <TechCarousel />
         </div>
       </section>
@@ -165,7 +165,7 @@ function App() {
             projRef(node);
             projScrollRef.current = node;
           }}
-          className={`flex justify-center transition-all ease-in-out duration-500 ${
+          className={`flex justify-center transition-all ease-in-out duration-500 mt-20 ${
             isProjInView
               ? "opacity-100 translate-y-0"
               : "opacity-0 -translate-x-10"

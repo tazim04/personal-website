@@ -4,7 +4,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Socials = () => {
   return (
-    <div className="fixed bottom-10 md:right-5 right-1">
+    <div className="fixed bottom-10 md:right-5 right-1 z-50">
       <div className="flex flex-col items-end">
         {/* GitHub */}
         <a
@@ -29,10 +29,12 @@ const Socials = () => {
         </a>
 
         {/* Instagram */}
-        <div className="flex items-center md:space-x-2">
-          <span className="text-gray-300 md:text-sm text-xs font-semibold">
+        <div className="group flex items-center md:space-x-2">
+          {/* Tooltip text */}
+          <span className="text-gray-300 md:text-sm text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity ease-in-out">
             Check out my art! <span className="md:inline hidden">-{">"}</span>
           </span>
+          {/* Instagram Icon */}
           <a
             href="https://www.instagram.com/te3kayart/"
             target="_blank"

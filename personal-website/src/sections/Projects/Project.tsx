@@ -1,4 +1,5 @@
 import "./Project.css";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 type ProjectProps = {
   project: {
@@ -18,13 +19,17 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
         href={project.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex-shrink-0 w-full md:w-1/3"
+        className="relative flex-shrink-0 w-full md:w-1/3 group"
       >
         <img
           src={project.thumbnail}
           alt={`${project.title} thumbnail`}
-          className="w-full h-auto object-cover rounded-lg hover:opacity-90 transition-opacity"
+          className="w-full max-h-52 object-cover rounded-lg transition-all opacity-100 group-hover:opacity-70 group-hover:-translate-y-1 ease-in-out"
         />
+        {/* Icon */}
+        <div className="absolute top-2 right-2 bg-opacity-70 rounded-full p-2 md:opacity-100 opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all ease-in-out">
+          <OpenInNewIcon className="text-white text-lg" />
+        </div>
       </a>
 
       {/* Project Details */}
@@ -44,7 +49,7 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           <h3 className="text-sm font-bold text-gray-400 mb-2">
             Technologies:
           </h3>
-          <ul className="list-disc list-inside grid grid-cols-2 gap-y-1 marker:text-rose-500">
+          <ul className="list-disc list-inside md:grid grid-cols-2 gap-y-1 marker:text-rose-500">
             {project.technologies.map((tech, index) => (
               <li key={index}>{tech}</li>
             ))}
