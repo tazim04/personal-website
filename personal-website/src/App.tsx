@@ -11,6 +11,7 @@ import About from "./sections/About/About";
 import Experience from "./sections/Experience/Experience";
 import Projects from "./sections/Projects/Projects";
 import { useRef, useState } from "react";
+import Footer from "./components/Footer/Footer";
 
 type Section = "home" | "about" | "experience" | "projects"; // Section union
 
@@ -173,6 +174,7 @@ function App() {
           <Projects />
         </section>
       </div>
+      <Footer />
     </div>
   );
 }
