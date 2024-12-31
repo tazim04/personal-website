@@ -27,8 +27,8 @@ const Project: React.FC<ProjectProps> = ({ project }) => {
           className="w-full max-h-52 object-cover rounded-lg transition-all opacity-100 group-hover:opacity-70 group-hover:-translate-y-1 ease-in-out"
         />
         {/* Icon */}
-        <div className="absolute top-2 right-2 bg-opacity-70 rounded-full p-2 md:opacity-100 opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all ease-in-out">
-          <OpenInNewIcon className="text-white text-lg" />
+        <div className="absolute top-2 right-2 rounded-full p-2 opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all ease-in-out">
+          <OpenInNewIcon className="text-gray-200 text-lg" />
         </div>
       </a>
 
